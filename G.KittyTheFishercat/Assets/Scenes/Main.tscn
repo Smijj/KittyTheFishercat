@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7h02r5sjljvx"]
+
+[ext_resource type="LabelSettings" uid="uid://c3gn8mkmn1avu" path="res://Assets/Fonts/DefaultFont.tres" id="1_g285x"]
+[ext_resource type="Script" path="res://Assets/Scripts/GameHandler.gd" id="1_pern3"]
+[ext_resource type="Script" path="res://Assets/Scripts/Conductor.gd" id="2_svlwp"]
+[ext_resource type="AudioStream" uid="uid://dptfta673a8wj" path="res://Assets/omsc-0.wav" id="3_dqru0"]
+[ext_resource type="Texture2D" uid="uid://c8wnvcfp325gu" path="res://Assets/KittyTheFishercat Wireboard NoUI.png" id="3_yp8rg"]
+[ext_resource type="Script" path="res://Assets/Scripts/RailCtrl.gd" id="5_clne1"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_pern3")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("3_yp8rg")
+centered = false
+
+[node name="Conductor" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dqru0")
+autoplay = true
+script = ExtResource("2_svlwp")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="RhythmBeatUI" type="Node2D" parent="UI"]
+position = Vector2(960, 855)
+
+[node name="Judgment Line" type="ColorRect" parent="UI/RhythmBeatUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -40.0
+offset_right = 5.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.580392, 0, 1)
+
+[node name="LeftRail" type="ColorRect" parent="UI/RhythmBeatUI/Judgment Line" node_paths=PackedStringArray("_IndicatorSpawnPos", "_JudgementLinePos")]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -5.0
+offset_right = 800.0
+offset_bottom = 5.0
+grow_vertical = 2
+rotation = 3.14159
+pivot_offset = Vector2(0, 5)
+color = Color(0.384314, 0.384314, 0.384314, 1)
+script = ExtResource("5_clne1")
+_IndicatorSpawnPos = NodePath("IndicatorSpawnPos")
+_JudgementLinePos = NodePath("../..")
+
+[node name="IndicatorSpawnPos" type="Node2D" parent="UI/RhythmBeatUI/Judgment Line/LeftRail"]
+position = Vector2(795, 5)
+
+[node name="RightRail" type="ColorRect" parent="UI/RhythmBeatUI/Judgment Line" node_paths=PackedStringArray("_IndicatorSpawnPos", "_JudgementLinePos")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -5.0
+offset_right = 800.0
+offset_bottom = 5.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(-5, 5)
+color = Color(0.384314, 0.384314, 0.384314, 1)
+script = ExtResource("5_clne1")
+_IndicatorSpawnPos = NodePath("IndicatorSpawnPos")
+_JudgementLinePos = NodePath("../..")
+
+[node name="IndicatorSpawnPos" type="Node2D" parent="UI/RhythmBeatUI/Judgment Line/RightRail"]
+position = Vector2(795, 5)
+
+[node name="Button" type="Button" parent="UI"]
+offset_left = 812.0
+offset_top = 938.0
+offset_right = 1108.0
+offset_bottom = 1020.0
+action_mode = 0
+text = "Spacebar"
+
+[node name="Label" type="Label" parent="UI"]
+offset_left = 41.0
+offset_top = 37.0
+offset_right = 373.0
+offset_bottom = 95.0
+text = "Gameplay Scene"
+label_settings = ExtResource("1_g285x")
+
+[connection signal="beat" from="Conductor" to="UI/RhythmBeatUI/Judgment Line/LeftRail" method="_on_conductor_beat"]
+[connection signal="beat" from="Conductor" to="UI/RhythmBeatUI/Judgment Line/RightRail" method="_on_conductor_beat"]

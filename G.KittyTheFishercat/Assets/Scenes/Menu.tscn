@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://7fv3y12lxbuy"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Menu.gd" id="1_1epdr"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_1epdr")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Play" type="Button" parent="UI"]
+offset_left = 743.0
+offset_top = 470.0
+offset_right = 1057.0
+offset_bottom = 588.0
+theme_override_font_sizes/font_size = 60
+text = "Play
+"
+
+[node name="Quit" type="Button" parent="UI"]
+offset_left = 783.0
+offset_top = 597.0
+offset_right = 1020.0
+offset_bottom = 699.0
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+
+[connection signal="button_down" from="UI/Play" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="UI/Quit" to="." method="_on_quit_button_down"]
