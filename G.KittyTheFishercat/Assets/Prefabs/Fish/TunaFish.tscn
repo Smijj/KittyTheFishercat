@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3gbw21l0550u"]
+
+[ext_resource type="Texture2D" uid="uid://bq5014qsiiw20" path="res://Assets/Creative Assets/Fish/fish-4-tuna.PNG" id="1_djru2"]
+
+[node name="Tuna" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(82, 2)
+texture = ExtResource("1_djru2")

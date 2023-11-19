@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4a1pk6a2dvmo"]
+
+[ext_resource type="Texture2D" uid="uid://c8dnpenhjh18m" path="res://Assets/Creative Assets/Fish/fish-0-mouse.PNG" id="1_lstvw"]
+
+[node name="Mousefish" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(111, -17)
+texture = ExtResource("1_lstvw")

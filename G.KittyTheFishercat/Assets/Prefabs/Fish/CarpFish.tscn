@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3f2fi3s40tjb"]
+
+[ext_resource type="Texture2D" uid="uid://dflpypqy45qj4" path="res://Assets/Creative Assets/Fish/fish-3-carp.PNG" id="1_e4fay"]
+
+[node name="Carp" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(93, 0)
+texture = ExtResource("1_e4fay")

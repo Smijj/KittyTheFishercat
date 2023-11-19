@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongDataSO" load_steps=3 format=3 uid="uid://bb0lf48qxcp4b"]
+
+[ext_resource type="AudioStream" uid="uid://d04x2nr3lt6wg" path="res://Assets/Audio/Music/Crystal Cave/Crystal Cave - 100bpm.mp3" id="1_hl4jo"]
+[ext_resource type="Script" path="res://Assets/Resources/Songs/SongDataSO.gd" id="2_6rrlf"]
+
+[resource]
+script = ExtResource("2_6rrlf")
+_Song = ExtResource("1_hl4jo")
+_BPM = 100
+_SongName = "Crystal Cave"
+_CreditName = "cynicmusic"
+_CreditLink = "https://opengameart.org/content/crystal-cave-song18"

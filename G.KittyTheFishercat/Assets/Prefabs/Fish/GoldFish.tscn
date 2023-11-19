@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2jc7xi01uwcc"]
+
+[ext_resource type="Texture2D" uid="uid://baukyytd1fjkh" path="res://Assets/Creative Assets/Fish/fish-5-goldfish.PNG" id="1_y12bp"]
+
+[node name="Goldfish" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48, -15)
+texture = ExtResource("1_y12bp")

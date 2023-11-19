@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongDataSO" load_steps=3 format=3 uid="uid://ct573r7faao1q"]
+
+[ext_resource type="AudioStream" uid="uid://5p1d6fvnen65" path="res://Assets/Audio/Music/No More Magic/No More Magic - 140bpm.ogg" id="1_pfpd6"]
+[ext_resource type="Script" path="res://Assets/Resources/Songs/SongDataSO.gd" id="2_2egdl"]
+
+[resource]
+script = ExtResource("2_2egdl")
+_Song = ExtResource("1_pfpd6")
+_BPM = 140
+_SongName = "No More Magic"
+_CreditName = "HorrorPen"
+_CreditLink = "https://opengameart.org/content/no-more-magic"

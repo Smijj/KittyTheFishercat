@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f2yt51fefi16"
+path="res://.godot/imported/Winds Of Stories - 140bpm.ogg-6299e6c01377d777d302ff4f80198740.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Winds of Stories/Winds Of Stories - 140bpm.ogg"
+dest_files=["res://.godot/imported/Winds Of Stories - 140bpm.ogg-6299e6c01377d777d302ff4f80198740.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

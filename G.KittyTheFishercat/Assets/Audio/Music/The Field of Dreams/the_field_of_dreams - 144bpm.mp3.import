@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csp8nfyvaiu5e"
+path="res://.godot/imported/the_field_of_dreams - 144bpm.mp3-fc29ebf46a4ba6f3a9ca0b429d02483d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/The Field of Dreams/the_field_of_dreams - 144bpm.mp3"
+dest_files=["res://.godot/imported/the_field_of_dreams - 144bpm.mp3-fc29ebf46a4ba6f3a9ca0b429d02483d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

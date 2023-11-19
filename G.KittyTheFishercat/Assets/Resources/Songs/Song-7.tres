@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongDataSO" load_steps=3 format=3 uid="uid://cjk2r504sn1oy"]
+
+[ext_resource type="AudioStream" uid="uid://f2yt51fefi16" path="res://Assets/Audio/Music/Winds of Stories/Winds Of Stories - 140bpm.ogg" id="1_qg8cb"]
+[ext_resource type="Script" path="res://Assets/Resources/Songs/SongDataSO.gd" id="2_r0dtq"]
+
+[resource]
+script = ExtResource("2_r0dtq")
+_Song = ExtResource("1_qg8cb")
+_BPM = 140
+_SongName = "Winds Of Stories"
+_CreditName = "HorrorPen"
+_CreditLink = "https://opengameart.org/content/winds-of-stories"

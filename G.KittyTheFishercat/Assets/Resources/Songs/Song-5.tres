@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SongDataSO" load_steps=3 format=3 uid="uid://b15r6e52d15ym"]
+
+[ext_resource type="AudioStream" uid="uid://ipib7x5l3nkl" path="res://Assets/Audio/Music/Path to Lake Land/Path to Lake Land - 130bpm.ogg" id="1_f2oeg"]
+[ext_resource type="Script" path="res://Assets/Resources/Songs/SongDataSO.gd" id="2_f83nw"]
+
+[resource]
+script = ExtResource("2_f83nw")
+_Song = ExtResource("1_f2oeg")
+_BPM = 130
+_SongName = "Path to Lake Land"
+_CreditName = "Alexandr Zhelanov"
+_CreditLink = "https://opengameart.org/content/path-to-lake-land"

@@ -1,92 +1,227 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7h02r5sjljvx"]
+[gd_scene load_steps=40 format=3 uid="uid://c7h02r5sjljvx"]
 
+[ext_resource type="Texture2D" uid="uid://bx642eglxhyiq" path="res://Assets/Creative Assets/BG.png" id="1_dikbt"]
 [ext_resource type="LabelSettings" uid="uid://c3gn8mkmn1avu" path="res://Assets/Fonts/DefaultFont.tres" id="1_g285x"]
-[ext_resource type="Script" path="res://Assets/Scripts/GameHandler.gd" id="1_pern3"]
+[ext_resource type="Script" path="res://Assets/Scripts/AudioManager.gd" id="2_4r8hg"]
+[ext_resource type="Resource" uid="uid://7q2wi2mta6hf" path="res://Assets/Resources/Songs/Song-0.tres" id="2_cq1ng"]
 [ext_resource type="Script" path="res://Assets/Scripts/Conductor.gd" id="2_svlwp"]
-[ext_resource type="AudioStream" uid="uid://dptfta673a8wj" path="res://Assets/omsc-0.wav" id="3_dqru0"]
-[ext_resource type="Texture2D" uid="uid://c8wnvcfp325gu" path="res://Assets/KittyTheFishercat Wireboard NoUI.png" id="3_yp8rg"]
-[ext_resource type="Script" path="res://Assets/Scripts/RailCtrl.gd" id="5_clne1"]
+[ext_resource type="AudioStream" uid="uid://bjdchtghl7ijg" path="res://Assets/Audio/Music/Piano Loop/Piano Loop - 138bpm.wav" id="3_1frf5"]
+[ext_resource type="Resource" uid="uid://boo8ee30ksdvh" path="res://Assets/Resources/Songs/Song-1.tres" id="3_1tk7e"]
+[ext_resource type="Resource" uid="uid://4i567g01r36e" path="res://Assets/Resources/Songs/Song-2.tres" id="4_gc7d7"]
+[ext_resource type="PackedScene" uid="uid://qfxfp2tpupxj" path="res://Assets/Prefabs/RhythmBeatUI.tscn" id="5_b740d"]
+[ext_resource type="Resource" uid="uid://ct573r7faao1q" path="res://Assets/Resources/Songs/Song-4.tres" id="5_h18y2"]
+[ext_resource type="Resource" uid="uid://bb0lf48qxcp4b" path="res://Assets/Resources/Songs/Song-3.tres" id="5_qj00m"]
+[ext_resource type="Resource" uid="uid://b15r6e52d15ym" path="res://Assets/Resources/Songs/Song-5.tres" id="6_gpqbk"]
+[ext_resource type="AudioStream" uid="uid://7nobdq7j5od2" path="res://Assets/Audio/SFX/Alert - Pop_01.wav" id="7_s107n"]
+[ext_resource type="Resource" uid="uid://chp8avmpy18nc" path="res://Assets/Resources/Songs/Song-6.tres" id="7_vbnpe"]
+[ext_resource type="Texture2D" uid="uid://dmpuqfjx080kl" path="res://Assets/Creative Assets/Kitty-Action.png" id="7_vp7ah"]
+[ext_resource type="Resource" uid="uid://cjk2r504sn1oy" path="res://Assets/Resources/Songs/Song-7.tres" id="8_cfs1v"]
+[ext_resource type="AudioStream" uid="uid://regip24bi1tt" path="res://Assets/Audio/SFX/WindUp - bloop.wav" id="8_h82ai"]
+[ext_resource type="AudioStream" uid="uid://chym5aiyhrq22" path="res://Assets/Audio/SFX/Rise01.wav" id="9_dfr7m"]
+[ext_resource type="Texture2D" uid="uid://bbk4emmpe2nm2" path="res://Assets/Creative Assets/Kitty-Sleep.png" id="9_hed6h"]
+[ext_resource type="Texture2D" uid="uid://5nitkot0p2tr" path="res://Assets/Creative Assets/Kitty-Alert.png" id="9_hwjxs"]
+[ext_resource type="Texture2D" uid="uid://ccnkawq3mphle" path="res://Assets/Creative Assets/Kitty-Windup.png" id="10_7myd2"]
+[ext_resource type="Texture2D" uid="uid://cqmkcf4ptohl6" path="res://Assets/Creative Assets/Kitty-Default-0.png" id="10_cnxt0"]
+[ext_resource type="Texture2D" uid="uid://dm4bf2qi5ysmb" path="res://Assets/Creative Assets/Kitty-Default-1.png" id="11_7mixi"]
+[ext_resource type="FontFile" uid="uid://cslpdru51evbw" path="res://Assets/Creative Assets/Fonts/KitType/kitType.ttf" id="15_5cdsg"]
+[ext_resource type="PackedScene" uid="uid://b4a1pk6a2dvmo" path="res://Assets/Prefabs/Fish/MouseFish.tscn" id="22_hnc3x"]
+[ext_resource type="PackedScene" uid="uid://d3f2fi3s40tjb" path="res://Assets/Prefabs/Fish/CarpFish.tscn" id="22_njpdg"]
+[ext_resource type="PackedScene" uid="uid://du1o3jm138b4j" path="res://Assets/Prefabs/Fish/EelFish.tscn" id="23_6s6bt"]
+[ext_resource type="PackedScene" uid="uid://du2wdvcrub1mb" path="res://Assets/Prefabs/Fish/GoldenCrackerFish.tscn" id="24_0gmn6"]
+[ext_resource type="PackedScene" uid="uid://b2jc7xi01uwcc" path="res://Assets/Prefabs/Fish/GoldFish.tscn" id="25_3hear"]
+[ext_resource type="PackedScene" uid="uid://bbugv07pmyvtr" path="res://Assets/Prefabs/Fish/SharkyFish.tscn" id="27_k7ipy"]
+[ext_resource type="PackedScene" uid="uid://dn4hm740cp206" path="res://Assets/Prefabs/Fish/SnapperFish.tscn" id="28_3lnnd"]
+[ext_resource type="PackedScene" uid="uid://c3gbw21l0550u" path="res://Assets/Prefabs/Fish/TunaFish.tscn" id="29_8iyst"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh6wq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vp7ah")
+}],
+"loop": true,
+"name": &"Action",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hwjxs")
+}],
+"loop": true,
+"name": &"Alert",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7mixi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cnxt0")
+}],
+"loop": false,
+"name": &"Default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hed6h")
+}],
+"loop": true,
+"name": &"Sleep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7myd2")
+}],
+"loop": true,
+"name": &"Windup",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_wscs5"]
+script/source = "extends Button
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	grab_focus.call_deferred()
+
+#func _on_focus_exited():
+#	grab_focus.call_deferred()
+"
+
+[sub_resource type="GDScript" id="GDScript_mxnt7"]
+script/source = "extends Button
+
+func _on_pressed():
+	get_tree().change_scene_to_file(\"res://Assets/Scenes/Menu.tscn\")
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jprnp"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.12549, 0.286275, 0.447059, 0.639216)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 15
+
+[sub_resource type="GDScript" id="GDScript_ybcj0"]
+script/source = "extends Label
+
+# Name Label
+func _on_audio_manager_song_played(SongData):
+	text = \"Song: \" + SongData._SongName
+"
+
+[sub_resource type="GDScript" id="GDScript_6w7vx"]
+script/source = "extends Label
+
+# Artist Label
+func _on_audio_manager_song_played(SongData):
+	text = \"Artist: \" + SongData._CreditName
+"
+
+[sub_resource type="GDScript" id="GDScript_vykmh"]
+script/source = "extends LinkButton
+
+# Link Button
+func _on_audio_manager_song_played(SongData):
+	uri = SongData._CreditLink
+"
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_pern3")
 
-[node name="Background" type="Sprite2D" parent="."]
-texture = ExtResource("3_yp8rg")
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource("2_4r8hg")
+_Songs = [ExtResource("2_cq1ng"), ExtResource("3_1tk7e"), ExtResource("4_gc7d7"), ExtResource("5_qj00m"), ExtResource("5_h18y2"), ExtResource("6_gpqbk"), ExtResource("7_vbnpe"), ExtResource("8_cfs1v")]
+
+[node name="Conductor" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("_PlayerAnim", "_SFX", "_FishSpawnPos", "_ActiveFish")]
+stream = ExtResource("3_1frf5")
+script = ExtResource("2_svlwp")
+_PlayerAnim = NodePath("../Foreground/PlayerSprite")
+_SFX = NodePath("../SFX")
+_BPM = 138
+_HitBufferPercentage = 0.3
+_ActionBeats = Array[int]([])
+_AlertSFX = ExtResource("7_s107n")
+_WindupSFX = ExtResource("8_h82ai")
+_ActionSFX = ExtResource("9_dfr7m")
+_FishSpawnPos = NodePath("../Foreground/PlayerSprite/FishSpawnPos")
+_FishPrefabs = Array[PackedScene]([ExtResource("22_njpdg"), ExtResource("23_6s6bt"), ExtResource("24_0gmn6"), ExtResource("25_3hear"), ExtResource("22_hnc3x"), ExtResource("27_k7ipy"), ExtResource("28_3lnnd"), ExtResource("29_8iyst")])
+_ActiveFish = Array[int]([])
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Background" type="Sprite2D" parent="Background"]
+texture = ExtResource("1_dikbt")
 centered = false
 
-[node name="Conductor" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_dqru0")
-autoplay = true
-script = ExtResource("2_svlwp")
+[node name="Foreground" type="CanvasLayer" parent="."]
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="Foreground"]
+position = Vector2(760.5, 389)
+scale = Vector2(0.682617, 0.682617)
+sprite_frames = SubResource("SpriteFrames_wh6wq")
+animation = &"Sleep"
+
+[node name="FishSpawnPos" type="Node2D" parent="Foreground/PlayerSprite"]
+position = Vector2(484.192, -35.9872)
 
 [node name="UI" type="CanvasLayer" parent="."]
+layer = 99
 
-[node name="RhythmBeatUI" type="Node2D" parent="UI"]
-position = Vector2(960, 855)
-
-[node name="Judgment Line" type="ColorRect" parent="UI/RhythmBeatUI"]
-anchors_preset = 8
+[node name="Control" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -5.0
-offset_top = -40.0
-offset_right = 5.0
-offset_bottom = 40.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.580392, 0, 1)
+grow_vertical = 0
 
-[node name="LeftRail" type="ColorRect" parent="UI/RhythmBeatUI/Judgment Line" node_paths=PackedStringArray("_IndicatorSpawnPos", "_JudgementLinePos")]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -5.0
-offset_right = 800.0
-offset_bottom = 5.0
-grow_vertical = 2
-rotation = 3.14159
-pivot_offset = Vector2(0, 5)
-color = Color(0.384314, 0.384314, 0.384314, 1)
-script = ExtResource("5_clne1")
-_IndicatorSpawnPos = NodePath("IndicatorSpawnPos")
-_JudgementLinePos = NodePath("../..")
+[node name="RhythmBeatUI" parent="UI/Control" node_paths=PackedStringArray("_Conductor") instance=ExtResource("5_b740d")]
+position = Vector2(0, -145)
+_Conductor = NodePath("../../../Conductor")
 
-[node name="IndicatorSpawnPos" type="Node2D" parent="UI/RhythmBeatUI/Judgment Line/LeftRail"]
-position = Vector2(795, 5)
-
-[node name="RightRail" type="ColorRect" parent="UI/RhythmBeatUI/Judgment Line" node_paths=PackedStringArray("_IndicatorSpawnPos", "_JudgementLinePos")]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -5.0
-offset_right = 800.0
-offset_bottom = 5.0
-grow_horizontal = 0
-grow_vertical = 2
-pivot_offset = Vector2(-5, 5)
-color = Color(0.384314, 0.384314, 0.384314, 1)
-script = ExtResource("5_clne1")
-_IndicatorSpawnPos = NodePath("IndicatorSpawnPos")
-_JudgementLinePos = NodePath("../..")
-
-[node name="IndicatorSpawnPos" type="Node2D" parent="UI/RhythmBeatUI/Judgment Line/RightRail"]
-position = Vector2(795, 5)
-
-[node name="Button" type="Button" parent="UI"]
-offset_left = 812.0
-offset_top = 938.0
-offset_right = 1108.0
-offset_bottom = 1020.0
+[node name="ActionButton" type="Button" parent="UI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = -20.0005
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_pressed_color = Color(0.992157, 0.721569, 0.294118, 1)
+theme_override_fonts/font = ExtResource("15_5cdsg")
+theme_override_font_sizes/font_size = 60
 action_mode = 0
 text = "Spacebar"
+script = SubResource("GDScript_wscs5")
+
+[node name="MenuButton" type="Button" parent="UI"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 70.0
+theme_override_fonts/font = ExtResource("15_5cdsg")
+theme_override_font_sizes/font_size = 48
+text = "Main Menu"
+script = SubResource("GDScript_mxnt7")
 
 [node name="Label" type="Label" parent="UI"]
+visible = false
 offset_left = 41.0
 offset_top = 37.0
 offset_right = 373.0
@@ -94,5 +229,54 @@ offset_bottom = 95.0
 text = "Gameplay Scene"
 label_settings = ExtResource("1_g285x")
 
-[connection signal="beat" from="Conductor" to="UI/RhythmBeatUI/Judgment Line/LeftRail" method="_on_conductor_beat"]
-[connection signal="beat" from="Conductor" to="UI/RhythmBeatUI/Judgment Line/RightRail" method="_on_conductor_beat"]
+[node name="CurrentSongInfo" type="PanelContainer" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -415.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 215.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jprnp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/CurrentSongInfo"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="UI/CurrentSongInfo/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("15_5cdsg")
+theme_override_font_sizes/font_size = 46
+text = "Song Name:"
+autowrap_mode = 2
+script = SubResource("GDScript_ybcj0")
+
+[node name="Artist" type="Label" parent="UI/CurrentSongInfo/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("15_5cdsg")
+theme_override_font_sizes/font_size = 46
+text = "Artist:"
+autowrap_mode = 2
+script = SubResource("GDScript_6w7vx")
+
+[node name="LinkButton" type="LinkButton" parent="UI/CurrentSongInfo/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.368627, 0.772549, 0.360784, 1)
+theme_override_fonts/font = ExtResource("15_5cdsg")
+theme_override_font_sizes/font_size = 46
+text = "Link to Source"
+script = SubResource("GDScript_vykmh")
+
+[connection signal="SongPlayed" from="AudioManager" to="Conductor" method="_on_audio_manager_song_played"]
+[connection signal="SongPlayed" from="AudioManager" to="UI/CurrentSongInfo/VBoxContainer/Name" method="_on_audio_manager_song_played"]
+[connection signal="SongPlayed" from="AudioManager" to="UI/CurrentSongInfo/VBoxContainer/Artist" method="_on_audio_manager_song_played"]
+[connection signal="SongPlayed" from="AudioManager" to="UI/CurrentSongInfo/VBoxContainer/LinkButton" method="_on_audio_manager_song_played"]
+[connection signal="SpawnActionBeat" from="Conductor" to="UI/Control/RhythmBeatUI" method="_on_conductor_spawn_action_beat"]
+[connection signal="beat" from="Conductor" to="UI/Control/RhythmBeatUI" method="_on_conductor_beat"]
+[connection signal="finished" from="Conductor" to="AudioManager" method="_on_conductor_finished"]
+[connection signal="focus_exited" from="UI/ActionButton" to="UI/ActionButton" method="_on_focus_exited"]
+[connection signal="pressed" from="UI/ActionButton" to="Conductor" method="_on_action_button_pressed"]
+[connection signal="pressed" from="UI/MenuButton" to="UI/MenuButton" method="_on_pressed"]

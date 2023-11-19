@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7nobdq7j5od2"
+path="res://.godot/imported/Alert - Pop_01.wav-a5fb1c318302d850d303ddc5ab041093.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/Alert - Pop_01.wav"
+dest_files=["res://.godot/imported/Alert - Pop_01.wav-a5fb1c318302d850d303ddc5ab041093.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

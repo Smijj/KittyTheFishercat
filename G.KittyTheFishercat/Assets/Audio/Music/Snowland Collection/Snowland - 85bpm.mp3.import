@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kbia7wsmvmf5"
+path="res://.godot/imported/Snowland - 85bpm.mp3-4d265592cfcf24d1bb17f1f4d0ec5bce.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Snowland Collection/Snowland - 85bpm.mp3"
+dest_files=["res://.godot/imported/Snowland - 85bpm.mp3-4d265592cfcf24d1bb17f1f4d0ec5bce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

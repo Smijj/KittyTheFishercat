@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn4hm740cp206"]
+
+[ext_resource type="Texture2D" uid="uid://djcdcq50i8oo" path="res://Assets/Creative Assets/Fish/fish-1-snapper.PNG" id="1_d660j"]
+
+[node name="Snapper" type="Node2D"]
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(116, -11)
+texture = ExtResource("1_d660j")
